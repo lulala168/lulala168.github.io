@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帥氣的正 - 個人簡介網頁</title>
+    <style>
+        /* 基本樣式 */
+        body {
+            font-family: '微軟正黑體', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        /* 標題樣式 */
+        header {
+            background: #50b3a2;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        /* 導航樣式 */
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* 區塊樣式 */
+        section {
+            padding: 20px 0;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        /* 社交媒體連結樣式 */
+        .social-links a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>帥氣的正</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#social-media">社交媒體</a></li>
+            <li><a href="#photos">照片展示</a></li>
+            <li><a href="#activities">活動紀錄</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>關於我</h2>
+            <p>這裡是我的個人資訊展示區。我是一個充滿活力和創意的人，喜歡探索新事物，分享生活點滴。</p>
+        </section>
+
+        <section id="social-media">
+            <h2>社交媒體連結</h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/tainaner" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </section>
+
+        <section id="photos">
+            <h2>照片展示</h2>
+            <p>這裡是我的個人照片展示區。（請在此處添加您的照片）</p>
+        </section>
+
+        <section id="activities">
+            <h2>活動紀錄</h2>
+            <p>這裡記錄了我參與的各種活動。（請在此處添加您的活動記錄）</p>
+        </section>
+    </div>
+
+    <script>
+        // JavaScript 功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 平滑滾動到錨點
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
